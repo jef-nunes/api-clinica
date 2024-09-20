@@ -11,7 +11,7 @@ class Pacientes(Model):
     endereco_numero = IntegerField(blank=True, null=True)
     endereco_bairro = CharField(max_length=100, blank=True, null=True)
     endereco_cep = CharField(max_length=100, blank=True, null=True)
-    data_cadastro = DateTimeField(auto_now_add=True)
+    data_registro_bd = DateTimeField(auto_now_add=True)
 
     class Meta:
         # ativar o gerenciamento do
