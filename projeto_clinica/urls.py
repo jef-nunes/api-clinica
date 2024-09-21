@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from app_pacientes.api.viewsets import PacientesViewSet
+from app_agendamentos.api.viewsets import AgendamentoViewSet
+from app_historicos.api.viewsets import HistoricosViewSet
 
 router = routers.DefaultRouter()
 router.register(r'pacientes', PacientesViewSet)
+router.register(r'agendamentos', AgendamentoViewSet)
+router.register(r'historicos', HistoricosViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
